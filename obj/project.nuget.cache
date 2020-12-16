@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Mc5tJd72mFvuq8iR/h87r16CJto9p5MGEQjbKtfKDwpko25TSlHx8vVIonn8A18wtthujGS4X6MtsdGuEcvIyA==",
+  "success": true,
+  "projectFilePath": "/Users/acetonen/Documents/Code/_Personal_Projects/f_sharp/education/education.fsproj",
+  "expectedPackageFiles": [
+    "/Users/acetonen/.nuget/packages/fsharp.core/4.7.2/fsharp.core.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
