@@ -17,9 +17,8 @@ module PigLatin =
 
 [<EntryPoint>]
 let main argv =
-    printfn "Hello world"
-    // for name in argv do
-    //     let newName = PigLatin.toPigLatin name
-    //     printfn "%s in Pig Latin is: %s" name newName
+    for name in argv do
+        let newName = PigLatin.toPigLatin name
+        printfn "%s in Pig Latin is: %s" name newName
     0
 
