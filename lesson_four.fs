@@ -11,5 +11,5 @@ let rec sum = function
 
 // 7.1.3
 let rec sum2 = function 
- | (m,0) -> m
- | (m,n) -> m + sum2 (m + n, n - 1)
+    | (m,0) -> m
+    | (m,n) -> m + n + sum2 (m, n - 1)
