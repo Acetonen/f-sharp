@@ -6,5 +6,6 @@
   <ItemGroup>
     <Compile Include="Program.fs" />
     <Compile Include="lesson_two.fs" />
+    <Compile Include="lesson_four.fs" />
   </ItemGroup>
 </Project>
