@@ -8,4 +8,4 @@ let prime n =
         | (n,m) when n % m = 0 -> false
         | (n,m) -> find (n, m - 1)
 
-    find (n, n - 1)
+    find (n, n / 2)
