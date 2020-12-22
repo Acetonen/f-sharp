@@ -1,10 +1,15 @@
 // 17.1
 let rec pow = function
+    | (m,0) -> ""
     | (m,1) -> string m
     | (m,n) -> m + pow (m, n - 1)
 
 // 17.2
-let rec isIthChar (s: string, n, c) = s.[n] = c
+let isIthChar (s, n, c) = 
+    match n with
+    | n when n < 0 || n > String.length s -> false
+    | n when s.[n] = c -> true
+    | _ -> false
 
 // 17.3
 let rec occFromIth (s, n, c) = 
