@@ -9,7 +9,7 @@ let rec isIthChar (s: string, n, c) = s.[n] = c
 // 17.3
 let rec occFromIth (s, n, c) = 
     let rec count = function
-        | (sum,index) when index = String.length s -> sum
+        | (sum,index) when index >= String.length s -> sum
         | (sum,index) when s.[index] = c -> count (sum+1, index+1)
         | (sum,index) when s.[index] <> c -> count (sum, index+1)
         | _ -> 0
