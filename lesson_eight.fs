@@ -7,6 +7,6 @@ let curry f =
     
 let uncurry g = 
     let f (x, y) =
-        let h y = g x
+        let h = g x
         h
     f
