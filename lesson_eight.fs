@@ -8,5 +8,5 @@ let curry f =
 let uncurry g = 
     let f (x, y) =
         let h = g x
-        h
+        h y
     f
