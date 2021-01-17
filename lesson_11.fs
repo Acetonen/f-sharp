@@ -1,8 +1,10 @@
-type F = 
+module Eleven
+
+type Time = 
   | AM
   | PM
 
-type TimeOfDay = { hours : int; minutes : int; f: F }
+type TimeOfDay = { hours : int; minutes : int; f: Time }
 
 let (.>.) x y = 
     match x, y with

@@ -1,3 +1,5 @@
+module Seven
+
 // 20.3.1
 let vat n x = x * (float(n) / 100.00 + 1.0)
 

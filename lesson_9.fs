@@ -1,3 +1,5 @@
+module Nine
+
 let copperInGold = 20 * 12
 let copperInSilver = 12
 

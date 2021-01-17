@@ -4,8 +4,18 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Program.fs" />
-    <Compile Include="lesson_two.fs" />
-    <Compile Include="lesson_four.fs" />
+    <!-- <Compile Include="Program.fs" /> -->
+    <Compile Include="lesson_1.fs" />
+    <Compile Include="lesson_2.fs" />
+    <Compile Include="lesson_3.fs" />
+    <Compile Include="lesson_4.fs" />
+    <Compile Include="lesson_5.fs" />
+    <Compile Include="lesson_6.fs" />
+    <Compile Include="lesson_7.fs" />
+    <Compile Include="lesson_8.fs" />
+    <Compile Include="lesson_9.fs" />
+    <Compile Include="lesson_10.fs" />
+    <Compile Include="lesson_11.fs" />
+    <Compile Include="lesson_12.fs" />
   </ItemGroup>
 </Project>
