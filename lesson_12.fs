@@ -19,7 +19,7 @@ let rec dnto number =
 // 34.3
 let rec evenn number = 
     let rec inner = function
-        | (0, result) -> 0 :: result
+        | (0, result) -> result
         | (current, result) -> inner (current - 2, current - 2 :: result)
 
-    inner (number * 2, [number * 2])
+    inner (number * 2 - 2, [number * 2 - 2])
