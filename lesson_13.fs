@@ -32,7 +32,7 @@ let rec split list=
         | (counter, head :: tail, odd, even) when counter % 2 = 0 -> inner (counter + 1, tail, odd, head :: even)
         | (counter, head :: tail, odd, even) -> inner (counter + 1, tail, head :: odd, even)
 
-    inner (0, list, [], [])
+    inner (1, list, [], [])
 
 exception DifferentSizeException
 // 39.5
