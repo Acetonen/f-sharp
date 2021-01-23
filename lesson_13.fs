@@ -10,6 +10,11 @@ let rec rmodd list =
 
     (0, list, []) |> inner |> List.rev
 
+// More functional solution:
+// let rec rmodd = function 
+//      | head :: (head2 :: tail) -> head2 :: rmodd tail 
+//      | _ -> [] 
+
 // 39.2
 let rec del_even = function
     | [] -> []
@@ -24,6 +29,7 @@ let rec multiplicity x xs =
         | (_ :: tail, result) -> inner (tail, result)
 
     inner (xs, 0)
+
 
 // 39.4
 let rec split list= 
