@@ -8,7 +8,7 @@ let rec sum (p, xs) =
     | [] -> 0
 
 // 40.2.1
-let rec count (xs, n) =
+let rec count (xs, n: int) =
     match xs with
     | head :: tail when head < n -> count (tail, n)
     | head :: (head2 :: tail) when (head = n && head2 = n) -> 1 + count ((head2 :: tail), n)
@@ -16,14 +16,14 @@ let rec count (xs, n) =
     | _ -> 0
 
 // 40.2.2
-let rec insert (xs, n) = 
+let rec insert (xs, n: int) = 
     match xs with
     | head :: tail when head >= n -> n :: head :: tail
     | head :: tail -> head :: insert (tail, n) 
     | [] -> [n]
 
 // 40.3.2
-let rec delete (n, xs) = 
+let rec delete (n: int, xs) = 
     match xs with
     | head :: tail when head = n -> tail
     | head :: tail -> head :: delete (n, tail) 
@@ -37,7 +37,7 @@ let rec intersect (xs1, xs2) =
     | [] -> []
 
 // 40.2.4
-let rec plus (xs1, xs2) =
+let rec plus (xs1: int list, xs2) =
     match (xs1, xs2) with
     | (head :: tail, head2 :: tail2) when head < head2 -> head :: plus (tail, head2 :: tail2)
     | (head :: tail, head2 :: tail2) -> head2 :: plus (head :: tail, tail2)
@@ -57,17 +57,17 @@ let rec smallest list =
     let rec inner = function
         | (result, head :: tail) when head < result -> inner (head, tail)
         | (result, _ :: tail) -> inner (result, tail)
-        | (result, []) -> result
+        | (result, []) -> Some result
 
     match list with
-    | [] -> 0
+    | [] -> Some 0
     | head :: tail -> inner (head, tail)
 
 
 // 40.3.3
 let rec sort = function
-    | [] -> []
-    | list -> smallest list :: ((smallest list, list) |> delete |> sort)
+    | list when (smallest list).IsNone || List.isEmpty list -> list
+    | list -> Option.get (smallest list) :: ((Option.get (smallest list), list) |> delete |> sort)
 
 // 40.4
 let rec revrev = function
