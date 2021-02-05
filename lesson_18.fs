@@ -13,7 +13,7 @@ let f n =
 let fibo n = 
     let previous = ref 0
     let last = ref 1
-    let count = ref 0
+    let count = ref 1
 
     while ! count < n do
         last := ! last + ! previous
