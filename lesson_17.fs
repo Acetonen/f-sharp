@@ -5,7 +5,7 @@ module Seventeen
 let try_find key m = 
     let rec findInTuples = function
         | [] -> None
-        | (head, value) :: _ when head = key -> Some value
+        | (head, value) :: _ when head = key -> Some(value)
         |  _ :: tail -> findInTuples tail
     
     m |> Map.toList |> findInTuples
