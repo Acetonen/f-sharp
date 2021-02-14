@@ -1,7 +1,7 @@
 module Twenty
 
 // 49.5.1
-let even_seq = Seq.initInfinite (fun i -> i * 2)
+let even_seq = Seq.initInfinite (fun i -> (i + 1) * 2)
 
 let rec fac = function
     | 1 -> 1
