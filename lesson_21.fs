@@ -1,7 +1,7 @@
 module TwentyOne
 
-// 49.5.2
-let fac_seq n = seq {
+// 50.2.1
+let fac_seq = fun n -> seq {
     let current = ref 1
     yield !current
     for i in 1..n do
@@ -9,8 +9,8 @@ let fac_seq n = seq {
         yield !current
 }
 
-// 49.5.3
-let seq_seq n = seq {
+// 50.2.2
+let seq_seq = fun n -> seq {
     for i in 0..n do
         if i % 2 = 0 
         then yield i / 2 
